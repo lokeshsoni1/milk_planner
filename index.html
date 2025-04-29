@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Milk Planner</title>
+  
+  <!-- Linking the CSS File -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Milk Planner</h1>
+
+    <!-- Form for Milk Planner Input -->
+    <form id="plannerForm">
+      <label for="milkType">Milk Type</label>
+      <select id="milkType" name="milkType">
+        <option value="cow">Cow Milk</option>
+        <option value="buffalo">Buffalo Milk</option>
+        <option value="goat">Goat Milk</option>
+      </select>
+
+      <label for="quantity">Quantity (in liters)</label>
+      <input type="number" id="quantity" name="quantity" required>
+
+      <label for="cost">Cost per liter (in ₹)</label>
+      <input type="number" id="cost" name="cost" required>
+
+      <button type="button" class="generate-bill-btn">Generate Bill</button>
+    </form>
+
+    <!-- Calendar -->
+    <div class="calendar">
+      <!-- Calendar grid will be generated dynamically with JavaScript -->
+    </div>
+
+    <!-- Bill Modal -->
+    <div id="billModal">
+      <div class="modal-content">
+        <h2>Milk Bill</h2>
+        <p></p>
+        <button class="close-btn">Close</button>
+      </div>
+    </div>
+
+    <!-- Floating Action Button -->
+    <button class="fab">+</button>
+  </div>
+
+  <!-- Linking the JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
